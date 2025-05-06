@@ -1,21 +1,21 @@
 
-import { useRef } from 'react'
-
+import React, { useState } from "react"
 
 function App() {
-const inputElement = useRef(null)
 
-const focusInput = () => {
-  inputElement.current.focus()
-  inputElement.current.value = "Aromal"
-};
+  const [click, setClick] = useState(0)
 
-
-  return <div>
-    <input type="text" ref={inputElement} />
-    <button onClick={() => focusInput()}>Focus and write</button>
+  const buttonClick = () => {
+    setClick(click + 1)
+   
+  }
+  return (
+  <div>
+ <h1>{click}</h1>
+ <button onClick={buttonClick}>+</button>
 
   </div>
+  )
 }
 
 export default App

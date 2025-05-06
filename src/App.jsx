@@ -6,7 +6,7 @@ function App() {
   const [click, setClick] = useState(0)
 
   const buttonClick = () => {
-    setClick(click + 1)
+    setClick(click + 2)
    
   }
   return (

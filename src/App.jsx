@@ -1,14 +1,14 @@
-import { useState } from 'react'
+
+import { useRef } from 'react'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+const inputElement = useRef(null)
+console.log(inputElement)
 
-  return (
-    <>
-    <p>Test 02</p>
-    </>
-  )
+  return <div>
+    <input type="text" ref={inputElement} />
+  </div>
 }
 
 export default App

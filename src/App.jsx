@@ -3,20 +3,33 @@ import React, { useState } from "react"
 
 function App() {
 
-  const [click, setClick] = useState(0)
+  const data = {
+    Kerala: "Thiruvananthapuram",
+    Karnataka: "Bangalore",
+    TamilNadu: "Chennai",
+  };
 
-  const buttonClick = () => {
-    setClick(click + 2)
-   
+  const [sS, setsS] = useState("Kerala")
+  const [sC, setsC] = useState("Thiruvanathapuram")
+  const changeState = (e) => {
+    setsS(e.target.value)
+    setsC(data[e.target.value])
   }
-  return (
-  <div>
-  <h1>Counter</h1>
- <h1>{click}</h1>
- <button onClick={buttonClick}>+</button>
 
-  </div>
+
+
+  return (
+    <div>
+      <select onChange={changeState}>
+      <option value="Kerala">Kerala</option>
+      <option value="Karnataka">Karnataka</option>
+      <option value="TamilNadu">TamilNadu</option>
+      </select>
+      <p>Selected state is: {sS}</p>
+      <p>Capital of selected state: {sC}</p>
+    </div>
   )
 }
+
 
 export default App

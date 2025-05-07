@@ -11,6 +11,7 @@ function App() {
   }
   return (
   <div>
+  <h1>Counter</h1>
  <h1>{click}</h1>
  <button onClick={buttonClick}>+</button>
 

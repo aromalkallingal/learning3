@@ -23,7 +23,7 @@ function App() {
       <select onChange={changeState}>
       <option value="Kerala">Kerala</option>
       <option value="Karnataka">Karnataka</option>
-      <option value="TamilNadu">TamilNadu</option>
+      <option value="TamilNadu">TamilNaduu</option>
       </select>
       <p>Selected state is: {sS}</p>
       <p>Capital of selected state: {sC}</p>

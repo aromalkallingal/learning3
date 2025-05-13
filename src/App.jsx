@@ -26,7 +26,7 @@ function App() {
       <option value="TamilNadu">TamilNaduu</option>
       </select>
       <p>Selected state is: {sS}</p>
-      <p>Capital of selected state : {sC}</p>
+      <p>Capital of selected state is : {sC}</p>
     </div>
   )
 }

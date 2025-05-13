@@ -1,35 +1,14 @@
+export default function App() {
 
-import React, { useState } from "react"
-
-function App() {
-
-  const data = {
-    Kerala: "Thiruvananthapuram",
-    Karnataka: "Bangalore",
-    TamilNadu: "Chennai",
-  };
-
-  const [sS, setsS] = useState("Kerala")
-  const [sC, setsC] = useState("Thiruvanathapuram")
-  const changeState = (e) => {
-    setsS(e.target.value)
-    setsC(data[e.target.value])
+  const loadPosts = async () => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const data = await res.text();
+    console.log(data);
   }
-
-
-
-  return (
-    <div>
-      <select onChange={changeState}>
-      <option value="Kerala">Kerala</option>
-      <option value="Karnataka">Karnataka</option>
-      <option value="TamilNadu">TamilNaduu</option>
-      </select>
-      <p>Selected state is: {sS}</p>
-      <p>Capital of selected state is : {sC}</p>
-    </div>
-  )
+  return <div>
+    <button>Load</button>
+  </div>
 }
 
 
-export default App
+

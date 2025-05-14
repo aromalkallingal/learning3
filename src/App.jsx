@@ -1,16 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Post from "./components/Post";
 
 export default function App() {
 
-  const [data, setData] = useState([]);
-  const loadPosts = async () => {
+ 
+  const [posts, setPosts] = useState([]);
+
+    const loadPosts = async () => {
     const res = await fetch('https://jsonplaceholder.typicode.com/posts');
     const data = await res.json();
-    setData(data);
+    setPosts(data);
   };
+  
+    useEffect(() => {
+      loadPosts();
+    }, []);
+
   return <div>
-    <button onClick={loadPosts}>Load</button>
-    {data.map((post) => <h1>{post.title}</h1>)}
+    {posts.map((post) => <Post title={post.title} body={post.body}/>)}
   </div>
 }
 

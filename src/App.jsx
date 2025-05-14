@@ -6,7 +6,7 @@ export default function App() {
     console.log(data);
   }
   return <div>
-    <button>Load</button>
+    <button onClick={loadPosts}>Load</button>
   </div>
 }
 

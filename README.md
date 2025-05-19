@@ -1,7 +1,7 @@
 # React + Vite
 
 done for learning 
-part 2
+part 2.6
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

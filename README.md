@@ -1,4 +1,4 @@
-learning ..# React + Vite
+learning react basics..# React + Vite
 
 done for learning 
 part 2.6

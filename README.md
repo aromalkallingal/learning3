@@ -1,6 +1,6 @@
 learning react basics..# React + Vite
 
-done for learning 
+done for learning react
 part 2.6
 
 Added css
